@@ -37,7 +37,7 @@ router.put('/:id', async (req, res, next) => {
 function saveArticle(path) {
     return async (req, res) => {
       let article = req.article
-      article.title = req.body.title
+      article.title = "Daily Progress"
       article.description = req.body.description
       article.markdown = req.body.markdown
       try {
