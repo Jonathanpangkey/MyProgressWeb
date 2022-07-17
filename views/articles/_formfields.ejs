@@ -1,12 +1,13 @@
-
-  <div class="form-group">
-    <label for="description">Give a desctiption or rate</label>
-    <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
-  </div>
-  <div class="form-group mb-2">
-    <label for="markdown">What is your progress this day?</label>
-    <textarea required name="markdown" id="markdown" class="form-control"><%= article.markdown %></textarea>
-  </div>
+<div class="form-group">
+  <label for="description">Give a rate (like good,bad,etc)</label>
+  <input type="text" name="description" class="form-control" id="description" value="<%= article.description %>">
+</div>
+<div class="form-group mb-2">
   
-  <a href="/" class="btn btn-secondary">Cancel</a>
-  <button type="submit" class="btn btn-primary">Save</button>
+<label for="markdown">What is your progress today?</label>
+<div class="grow-wrap">
+<textarea required name="markdown" id="markdown" class="textarea form-control" onInput="this.parentNode.dataset.replicatedValue = this.value"><%= article.markdown %></textarea>
+</div>
+
+<a href="/" class="btn btn-secondary mt-2">Cancel</a>
+<button type="submit" class="btn btn-gold mt-2">Save</button>
