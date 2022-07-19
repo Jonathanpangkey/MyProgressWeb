@@ -7,7 +7,7 @@ const Articles = require("./models/articles");
 app = express();
 
 mongoose.connect(
-	"mongodb://170703Nathan:170703Nathan@cluster0-shard-00-00.6hfpn.mongodb.net:27017,cluster0-shard-00-01.6hfpn.mongodb.net:27017,cluster0-shard-00-02.6hfpn.mongodb.net:27017/?ssl=true&replicaSet=atlas-qqmuiu-shard-0&authSource=admin&retryWrites=true&w=majority",
+	"mongodb://<username>:<password>@cluster0-shard-00-00.6hfpn.mongodb.net:27017,cluster0-shard-00-01.6hfpn.mongodb.net:27017,cluster0-shard-00-02.6hfpn.mongodb.net:27017/?ssl=true&replicaSet=atlas-qqmuiu-shard-0&authSource=admin&retryWrites=true&w=majority",
 	{ useNewUrlParser: true },
 	{ useUnifiedTopology: true }
 );
