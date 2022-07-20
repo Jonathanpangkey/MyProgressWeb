@@ -29,10 +29,6 @@ app.get("/", async (req, res) => {
 	});
 });
 
-app.get("*", function (req, res, next) {
-	res.locals.user = req.user || null;
-	next();
-});
 
 app.use("/articles", articleRouter);
 
