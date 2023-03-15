@@ -20,7 +20,9 @@ const articleSchema = new mongoose.Schema (
         },
         createAt:{
             type: Date,
-            default: Date.now()
+            default: function() {
+                return new Date();
+            }
         },
         sanitizedHtml : {
             type: String,
